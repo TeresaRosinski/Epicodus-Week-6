@@ -17,11 +17,13 @@ module.exports = {
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(),
-    new Dotenv(),
     new HtmlWebpackPlugin({
-      title: 'project-name',
+      title: 'currency-exchange',
       template: './src/index.html',
       inject: 'body'
+    }),
+    new Dotenv({
+      path: './.env'
     })
   ],
   module: {

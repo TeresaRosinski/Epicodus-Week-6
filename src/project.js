@@ -1,29 +1,23 @@
-
-export async function getCurrencyExchange() {
+export async function getCurrencyData() {
   try {
-    let response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/usd`)
-    let jsonifiedResponse;
+    let response = await fetch(`https://v6.exchangerate-api.com/v6/${process.env.API_KEY}/latest/usd`);
+    let currencyData;
     if (response.ok && response.status == 200) {
-      jsonifiedResponse = await response.json();
+      currencyData = await response.json();
     } else {
-      jsonifiedResponse = false;
+      currencyData = false;
     }
-    return jsonifiedResponse;
+    console.log(currencyData);
+    return currencyData;
   } catch(error) {
     return false;
   }
 }
 
-
-// second way to get api data
-export function getJSON (url){
-  const xhr = new XMLHttpRequest();
-  xhr.open('GET', url);
-  xhr.onload = () => {  //onload ever will run when callback is executed?
-    if(xhr.status === 200){
-      let data = JSON.parse(xhr.responseText);
-      console.log(data);
-    }
-  };
-  xhr.send();
+export function currencyConversion (currencyData, inputtedAmount, currencyToConvertTo) {
+  //math = amount inputted * currency 
+  console.log(currencyData);
+  let convertRatio = currencyData.conversion_rates[currencyToConvertTo];
+  let calculatedConversion = inputtedAmount * convertRatio;
+  return calculatedConversion; 
 }
