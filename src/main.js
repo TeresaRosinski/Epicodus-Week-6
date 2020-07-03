@@ -5,6 +5,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 import { getCurrencyData, currencyConversion } from './project.js';
 
+
+
 $(document).ready(function(){
   $("#changeMoney").click(async function(){
     console.log("lol");
