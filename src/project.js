@@ -6,12 +6,11 @@ export async function getCurrencyData() {
       currencyData = await response.json();
     } else {
       currencyData = false;
-      console.log(response);
+      console.log(`response: ${response}`);
     }
-    console.log(currencyData);
     return currencyData;
   } catch(error) {
-    console.log(error)
+    console.log("error: " + error); 
     return false;
   }
 }
@@ -25,7 +24,6 @@ export function checkCurrency(currencyData, currencyToConvertTo){
 }
 
 export function currencyConversion (currencyData, inputtedAmount, currencyToConvertTo) {
-  console.log(currencyData);
   if(checkCurrency(currencyData, currencyToConvertTo) === true){
   let convertRatio = currencyData.conversion_rates[currencyToConvertTo];
   let calculatedConversion = inputtedAmount * convertRatio;
