@@ -13,7 +13,8 @@ $(document).ready(function(){
     const inputtedAmount = $("input#originalAmount").val();
     const currencyToConvertTo = $("#currencies").val();
     let amountToShow = currencyConversion(jsonObject, inputtedAmount, currencyToConvertTo);
-    $("#output").text(amountToShow);
+    let display = `$ ${inputtedAmount} USD converts to ${amountToShow} ${currencyToConvertTo}.`;
+    $("#output").text(display);
     event.preventDefault();
   });
 
