@@ -9,7 +9,6 @@ import { getCurrencyData, currencyConversion } from './project.js';
 
 $(document).ready(function(){
   $("#changeMoney").click(async function(){
-    console.log("lol");
     const jsonObject = await getCurrencyData();
     const inputtedAmount = $("input#originalAmount").val();
     const currencyToConvertTo = $("#currencies").val();
