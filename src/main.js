@@ -3,7 +3,7 @@ import $ from 'jquery';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
-import { getCurrencyData, currencyConversion } from './project.js';
+import { getCurrencyData, currencyConversion } from './currencyConversion.js';
 
 
 

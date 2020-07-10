@@ -11,6 +11,7 @@ export async function getCurrencyData() {
     return currencyData;
   } catch(error) {
     console.log("error: " + error); 
+    alert(error); 
     return false;
   }
 }
@@ -29,7 +30,7 @@ export function currencyConversion (currencyData, inputtedAmount, currencyToConv
   let calculatedConversion = inputtedAmount * convertRatio;
   return calculatedConversion; 
   } else {
-    console.log("That currency no longer exists");
+    console.log("That currency no longer exists");// isn't this the alert that I need?
     alert("That currency no longer exists in this database");
   }
 }

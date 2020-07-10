@@ -17,7 +17,7 @@ This program allows users to enter in a value in USD and convert that value to a
 Open by downloading:
 1. Download this repository onto your computer by clicking the 'clone or download button'
 2. In the terminal run: npm install
-3. Double click index.html to open it in your web browser
+3. To start project, run npm start
 4. To get an API key visit: https://www.exchangerate-api.com/ and create a free user profile
 5. In the project create a .env file 
 6. Add the .env file to the .gitignore file
