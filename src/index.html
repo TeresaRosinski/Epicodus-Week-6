@@ -8,11 +8,11 @@
     <h1 class ='display-2'>Change Your Currency</h1>
     <p class="lead">Enter the amount to be converted from USD</p>
     <form id="convertCurrency">
-      <div class = "form-group col-lg-6" id="amount">
+      <div class = "form-group col-lg-6 mx-auto" id="amount">
         <div class="input-group">
           <input id="originalAmount" placeholder="$" class="form-control" type = "number" aria-label="$">
           <span class ="input-group-btn">
-            <button class ="btn btn-secondary" type="button">Go!</button>
+            <button class ="btn btn-secondary" id="changeMoney" type="button">Go!</button>
         </div>
       </div>
       <div class = "form-group" id="currencySelector">
@@ -32,7 +32,6 @@
           </select>
         </div>
         <div>
-          <button id="changeMoney" type="button" class = "btn"> Change My Money </button>
         </div>  
         </form>
       <div id="output" class = "col-sm-4">
