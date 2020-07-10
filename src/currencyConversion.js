@@ -6,7 +6,8 @@ export async function getCurrencyData() {
       currencyData = await response.json();
     } else {
       currencyData = false;
-      console.log(`response: ${response}`);
+      alert('The api call was unsuccessful');
+      console.log(response);
     }
     return currencyData;
   } catch(error) {
