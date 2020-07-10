@@ -17,10 +17,12 @@ export async function getCurrencyData() {
   }
 }
 
+
 export function checkCurrency(currencyData, currencyToConvertTo){
-  if (currencyData.conversion_rates[currencyToConvertTo]){
+  if (currencyData && currencyData.conversion_rates[currencyToConvertTo]){
     return true;
   } else {
+    alert("The api call was unsuccessful, refresh the page and try again.");
     return false;
   }
 }
