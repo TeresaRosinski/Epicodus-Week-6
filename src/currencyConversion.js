@@ -29,9 +29,9 @@ export function checkCurrency(currencyData, currencyToConvertTo){
 
 export function currencyConversion (currencyData, inputtedAmount, currencyToConvertTo) {
   if(checkCurrency(currencyData, currencyToConvertTo) === true){
-  let convertRatio = currencyData.conversion_rates[currencyToConvertTo];
-  let calculatedConversion = inputtedAmount * convertRatio;
-  return calculatedConversion; 
+    let convertRatio = currencyData.conversion_rates[currencyToConvertTo];
+    let calculatedConversion = inputtedAmount * convertRatio;
+    return calculatedConversion; 
   } else {
     console.log("That currency no longer exists");// isn't this the alert that I need?
     alert("That currency no longer exists in this database");
