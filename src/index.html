@@ -3,41 +3,37 @@
 <head>
   <title>Currency Exchange</title>
 </head>
-<body>
+<body class="bg-info text-white">
   <div class = "container text-center">
-    <h1 class ='display-2'>Change Your Currency</h1>
-    <p class="lead">Enter the amount to be converted from USD</p>
+    <h1 class ='display-2 mt-5 mb-5'>Change Your Currency</h1>
+    <p class="lead mt-5">Enter the amount to be converted from USD</p>
     <form id="convertCurrency">
       <div class = "form-group col-lg-6 mx-auto" id="amount">
-        <div class="input-group">
+        <div class="input-group mt-2">
           <input id="originalAmount" placeholder="$" class="form-control" type = "number" aria-label="$">
           <span class ="input-group-btn">
-            <button class ="btn btn-secondary" id="changeMoney" type="button">Go!</button>
+          <button class ="btn btn-secondary" id="changeMoney" type="button">Go!</button>
         </div>
       </div>
       <div class = "form-group" id="currencySelector">
-          <select id="currencies" name="currencies">
-            <option value="AED">AED, United Arab Emirates Dirham</option>
-            <option value="ARS">ARS, Argentine Peso</option>
-            <option value="AUD">AUD, Australian Dollar</option>
-            <option value="BGN">BGN, Bulgarian Dollar</option>
-            <option value="BSD">BSD, Bahamian Dollar</option>
-            <option value="BRL">BRL, Brazilian Real</option>
-            <option value="CHF">CHF, Swiss Franc</option>
-            <option value="CLP">CLP, Chilean Peso</option>
-            <option value="CNY">CNY, Chinese Renminbi</option>
-            <option value="COP">COP, Colombian Peso</option>
-            <option value="CZK">CZK, Czech Koruna</option>
-            <option value="DKK">DKK, 	Danish Krone</option>
-          </select>
-        </div>
-        <div>
-        </div>  
-        </form>
-      <div id="output" class = "col-sm-4">
-      </div>
+        <select id="currencies" name="currencies">
+          <option value="AED">AED, United Arab Emirates Dirham</option>
+          <option value="ARS">ARS, Argentine Peso</option>
+          <option value="AUD">AUD, Australian Dollar</option>
+          <option value="BGN">BGN, Bulgarian Dollar</option>
+          <option value="BSD">BSD, Bahamian Dollar</option>
+          <option value="BRL">BRL, Brazilian Real</option>
+          <option value="CHF">CHF, Swiss Franc</option>
+          <option value="CLP">CLP, Chilean Peso</option>
+          <option value="CNY">CNY, Chinese Renminbi</option>
+          <option value="COP">COP, Colombian Peso</option>
+          <option value="CZK">CZK, Czech Koruna</option>
+          <option value="DKK">DKK, 	Danish Krone</option>
+        </select>
+      </div>  
+    </form>
+    <div id="output">
     </div>
-  </div>
   </div>
 </body>
 </html>
